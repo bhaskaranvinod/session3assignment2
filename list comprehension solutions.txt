@@ -1,0 +1,55 @@
+1:
+
+inlist = ("acadgild")
+list(inlist)
+outlist = [x.upper() for x in list(inlist)]
+print (outlist)
+
+
+===================
+
+2.
+
+inlist = ['x','y','z']
+
+newlist = [(a+a*j) for a in ['x','y','z'] for j in range(0,4)]
+
+print(newlist)
+
+
+output
+['x', 'xx', 'xxx', 'xxxx', 'y', 'yy', 'yyy', 'yyyy', 'z', 'zz', 'zzz', 'zzzz']
+
+===========================
+3.
+inlist = ['x','y','z']
+newlist = [(j+a*j) for a in range(0,4) for j in ['x','y','z']]
+print(newlist)
+
+output
+['x', 'y', 'z', 'xx', 'yy', 'zz', 'xxx', 'yyy', 'zzz', 'xxxx', 'yyyy', 'zzzz']
+============================
+4.
+
+newlist = [[a+b] for a in range(2, 5) for b in range(0,3)]
+print(newlist)
+
+[[2], [3], [4], [3], [4], [5], [4], [5], [6]]
+ 
+==============
+5.
+
+newlist = [[(a+b) for a in range(2,6)] for b in range(0,4)]
+print(newlist)
+
+output
+[[2, 3, 4, 5], [3, 4, 5, 6], [4, 5, 6, 7], [5, 6, 7, 8]]
+
+=============
+6.
+newlist = [(b,a) for a in range(1,4) for b in range(1,4)]
+print(newlist)
+
+output
+[(1, 1), (2, 1), (3, 1), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]
+
